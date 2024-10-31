@@ -1,3 +1,4 @@
+/*
 .App {
   text-align: center;
 }
@@ -35,4 +36,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  width: 890px;
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+header div {
+  display: flex;
+  /* border: 1px solid black; */
+  height: 59px;
+  margin: 30px;
+}
+
+nav {
+  /* border: 1px solid black; */
+}
+
+ul {
+  /* border: 1px solid black; */
+}
+
+ul li {
+  display: inline;
+  list-style: none;
+  padding: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border: 1px solid black;
+}
+
+ul li a {
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+}
+
+ul li a:link, ul li a:visited {
+  text-decoration: none;
+}
+
+.little-lemon-logo {
+  width: 202px;
+  /* height: 59px; */
+  /* border: 1px solid yellow; */
+}
+
+main {
+  background-color: #495E57;
 }
