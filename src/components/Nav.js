@@ -1,6 +1,8 @@
+// import Logo from '../assets/images/Logo.svg'
 const Nav = () => {
     return (
         <nav>
+            {/* <img src={Logo} alt="" className="little-lemon-logo"/> */}
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>

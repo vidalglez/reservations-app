@@ -50,22 +50,31 @@ html {
 
 body {
   margin: 0 auto;
-  width: 890px;
+  /* width: 890px; */
 }
 
 
 header {
   display: flex;
-  justify-content: center;
-  /* border: 1px solid red; */
+  /* justify-content: center; */
+  justify-content: space-between;
+  height: 59px;
+  /* margin: 30px; */
+  margin: 30px auto;
+  width: 890px;
 }
 
+header nav {
+  flex: 2;
+}
+
+/*
 header div {
   display: flex;
-  /* border: 1px solid black; */
   height: 59px;
   margin: 30px;
 }
+*/
 
 nav {
   /* border: 1px solid black; */
@@ -75,13 +84,20 @@ ul {
   /* border: 1px solid black; */
 }
 
+nav ul {
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+}
+
 ul li {
-  display: inline;
+  /* display: inline; */
   list-style: none;
-  padding: 10px;
+  flex: 1;
+  /* padding: 10px;
   margin-left: 8px;
-  margin-right: 8px;
-  border: 1px solid black;
+  margin-right: 8px; */
+  /* border: 1px solid black; */
 }
 
 ul li a {

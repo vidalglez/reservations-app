@@ -4,10 +4,10 @@ import Nav from "./Nav"
 const Header = () => {
     return (
         <header>
-            <div>
+            {/* <div> */}
                 <img src={Logo} alt="" className="little-lemon-logo"/>
                 <Nav />
-            </div>
+            {/* </div> */}
         </header>
     )
 }
