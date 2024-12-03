@@ -121,3 +121,59 @@ ul li a:link, ul li a:visited {
 main {
   background-color: #495E57;
 }
+
+section {
+  display: flex;
+  justify-content: space-between;
+  width: 890px;
+  margin: 30px auto;
+  box-sizing: border-box;
+  /* height: 406px; */
+  /* border: 1px solid black; */
+}
+
+.restaurant-food {
+  position: relative;
+  top: 30px;
+  width: 375px;
+  height: 439px;
+  border-radius: 16px;
+}
+
+.display-title {
+  color: #F4CE14;
+  font-family: "Markazi Text", serif;
+  font-weight: 500; /*Medium???*/
+  font-size: 72px; /*64pt 5.333rem*/
+  /* border: 1px solid black; */
+  margin: 50px 0 0 0;
+}
+
+.display-sub-title {
+  color: #FFFFFF;
+  font-family: "Markazi Text", serif;
+  font-weight: 400; /*Regular???*/
+  /* font-size: 3.333rem; */
+  font-size: 52px;
+  /* border: 1px solid black; */
+  margin: 20px 0 30px 0;
+}
+
+.description-item {
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  width: 276px;
+
+}
+
+button {
+  font-family: "Karla", sans-serif;
+  font-size: 20px; /*20pt*/
+  font-weight: bold;
+  border-radius: 16px;
+  background-color: #F4CE14;
+  width: 200px;
+  height: 60px;
+}
