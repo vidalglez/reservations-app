@@ -237,6 +237,19 @@ main {
 
 }
 
+.order-delivery {
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+.order-delivery a {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+}
+
 .yellow-button {
   font-family: "Karla", sans-serif;
   font-size: 20px; /*20pt*/
@@ -246,6 +259,10 @@ main {
   width: 200px;
   height: 60px;
   border-style: none;
+}
+
+.bycicle-icon {
+  width: 20px;
 }
 
 /* button:hover {
