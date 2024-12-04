@@ -6,10 +6,10 @@ const SpecialFoodItem = (props) => {
       <img src={props.itemPhoto} alt="" className="specials-item-img" />
       <div className="specials-item-details">
         <div className="specials-item-title-price">
-          <h3>{props.title}</h3>
-          <p>${props.price}</p>
+          <h3>{props.special.title}</h3>
+          <p>${props.special.price}</p>
         </div>
-        <p>{props.description}</p>
+        <p>{props.special.description}</p>
         <div className="order-delivery">
           <a href="#">Order a delivery</a>
           <img src={BycicleIcon} alt="" className="bycicle-icon" />

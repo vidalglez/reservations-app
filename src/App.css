@@ -195,10 +195,31 @@ main {
   margin: 24px;
 }
 
+.specials-item-details > p {
+  height: 120px;
+  font-family: "Karla", sans-serif;
+  color: #495E57;
+}
+
 .specials-item-title-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* height: 50px; */
+  margin-bottom: 30px;
+}
+
+.specials-item-title-price h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.specials-item-title-price p {
+  font-family: "Karla", sans-serif;
+  color: #EE9972;
+  font-size: 16px;
+  margin: 0;
 }
 
 .restaurant-food {
@@ -244,10 +265,14 @@ main {
 
 .order-delivery a {
   margin-right: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   font-family: "Karla", sans-serif;
+}
+
+.order-delivery a:visited {
+  color: #000000;
 }
 
 .yellow-button {
