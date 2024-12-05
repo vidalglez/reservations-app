@@ -174,7 +174,7 @@ main {
 
 .testimonial-item {
   width: 200px;
-  height: 175px;
+  /* height: 175px; */
   /* border: 1px solid black; */
   box-sizing: border-box;
   background-color: #FFFFFF;
@@ -193,9 +193,10 @@ main {
 }
 
 .testimonial-details {
-  display: flex;
+  text-align: center;
+  /* display: flex; */
   /* border: 1px solid black; */
-  align-items: center;
+  /* align-items: center; */
 }
 
 .testimonial-details p {
@@ -207,9 +208,11 @@ main {
   font-weight: bold;
 }
 
-.testimonial-review p{
-  margin: 0;
+.testimonial-review p {
+  margin: 15px;
   font-family: "Karla", sans-serif;
+  color: #495E57;
+  /* border: 1px solid black; */
 }
 
 .star-icon {
