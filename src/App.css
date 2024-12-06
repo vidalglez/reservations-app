@@ -368,6 +368,69 @@ main {
   border: 1px solid #FFFFFF;
 } */
 
+
+.about-section {
+  background-color: #F4CE14;
+  padding: 40px 0;
+}
+
+.restaurant-chef-image, .restaurant-image {
+  width: 268px;
+  height: 336px;
+  /* z-index: 10; */
+}
+
+.restaurant-chef-image {
+  position: relative;
+  z-index: 10;
+}
+
+.restaurant-image {
+  position: absolute;
+  top: 120px;
+  left:60px;
+  z-index: 0;
+}
+
+.about {
+  width: 890px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about > div {
+  flex: 1;
+}
+
+.about-photo-container {
+  text-align: right;
+  position: relative;
+}
+
+.about-title {
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
+  font-size: 72px;
+  margin: 0;
+}
+
+.about-subtitle {
+  font-family: "Markazi Text", serif;
+  font-weight: 400;
+  font-size: 52px;
+  margin: 0;
+}
+
+.about-description {
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  
+  /* width: 276px; */
+
+}
+
 footer {
   background-color: #495E57;;
   height: 60px;
