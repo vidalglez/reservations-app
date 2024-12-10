@@ -3,7 +3,7 @@ import BycicleIcon from "../assets/images/bycicle-icon.jpg"
 const SpecialFoodItem = (props) => {
   return (
     <div className="specials-item">
-      <img src={props.itemPhoto} alt="" className="specials-item-img" />
+      <img src={require(`../assets/images/${props.special.image}`)} alt="" className="specials-item-img" />
       <div className="specials-item-details">
         <div className="specials-item-title-price">
           <h3>{props.special.title}</h3>

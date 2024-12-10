@@ -6,20 +6,26 @@ import SpecialFoodItem from "./SpecialFoodItem"
 const Highlights = () => {
   const specials = [
     {
+      id: '1',
       title: "Greek Salad",
       price: "12.99",
+      image: 'greek-salad-med.jpg',
       description:
         "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
     },
     {
+      id: '2',
       title: "Pasta",
       price: "5.00",
+      image: 'pasta-medium.jpg',
       description:
         "This comes straight from grandma's recipe book, every last ingredient hass been sourced and is as authenthic as can be imagined.",
     },
     {
+      id: '3',
       title: "Bruchetta",
       price: "5.99",
+      image: 'taps-medium.jpg',
       description:
         "Our Bruscheta is made from grilled bread that has been smeared with garlic and seasoned with alt and olive oil.",
     },
@@ -35,9 +41,7 @@ const Highlights = () => {
           </div>
         </div>
         <div className="specials-content">
-          <SpecialFoodItem itemPhoto={GreekSalad} special={specials[0]} />
-          <SpecialFoodItem itemPhoto={Pasta} special={specials[1]} />
-          <SpecialFoodItem itemPhoto={Bruschetta} special={specials[2]} />
+          {specials.map(special => <SpecialFoodItem special={special} key={special.id} />)}
         </div>
       </div>
     </section>
