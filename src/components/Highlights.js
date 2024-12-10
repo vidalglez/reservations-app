@@ -30,7 +30,9 @@ const Highlights = () => {
       <div className="highlights">
         <div className="specials-header">
           <h2 className="specials-title">Specials</h2>
-          <button className="yellow-button">Online Menu</button>
+          <div className="yellow-button">
+            <a href="#">Online Menu</a>
+          </div>
         </div>
         <div className="specials-content">
           <SpecialFoodItem itemPhoto={GreekSalad} special={specials[0]} />

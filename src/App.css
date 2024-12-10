@@ -356,6 +356,14 @@ main {
   width: 200px;
   height: 60px;
   border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellow-button a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .bycicle-icon {
