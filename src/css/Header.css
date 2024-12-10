@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 59px;
+  margin: 30px auto;
+  width: 890px;
+}
+
+header nav {
+  flex: 2;
+}
+
+.little-lemon-logo {
+  width: 202px;
+}

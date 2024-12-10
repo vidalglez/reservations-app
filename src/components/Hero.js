@@ -15,7 +15,7 @@ const Hero = () => {
           </div>
         </article>
         <article>
-          <img src={RestaurantFood} alt="" className="restaurant-food" />
+          <img src={RestaurantFood} alt="" className="restaurant-food-image" />
         </article>
       </div>
     </section>

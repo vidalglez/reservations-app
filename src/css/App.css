@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.yellow-button {
+  font-family: "Karla", sans-serif;
+  font-size: 20px; /*20pt*/
+  font-weight: bold;
+  border-radius: 16px;
+  background-color: #F4CE14;
+  width: 200px;
+  height: 60px;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellow-button a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.bycicle-icon {
+  width: 20px;
+}
+
+/* button:hover {
+  background-color: #495E57;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+} */
+
+

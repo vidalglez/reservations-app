@@ -1,0 +1,22 @@
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.nav-links ul li {
+  list-style: none;
+  flex: 1;
+  text-align: center;
+}
+
+.nav-links ul li a {
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+}
+
+ul li a:link,
+ul li a:visited {
+  text-decoration: none;
+  color: #000000;
+}
