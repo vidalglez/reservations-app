@@ -1,5 +1,6 @@
 .testimonials {
-  width: 890px;
+  width: 100%;
+  max-width: 890px;
   margin: 0px auto 0 auto;
   padding-top: 40px;
   padding-bottom: 50px;
@@ -55,4 +56,11 @@
 
 .star-icon {
   width: 25px;
+}
+
+@media all and (max-width: 500px) {
+  .testimonials {
+    width: 100%; /* Ensure it does not exceed viewport */
+    max-width: 378px; /* Use max-width to set limits */
+  }
 }

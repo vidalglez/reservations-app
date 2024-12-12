@@ -3,7 +3,8 @@ header {
   justify-content: space-between;
   height: 59px;
   margin: 30px auto;
-  width: 890px;
+  width: 100%;
+  max-width: 890px;
 }
 
 header nav {
@@ -15,5 +16,9 @@ header nav {
 }
 
 @media all and (max-width: 500px) {
-  
+  header {
+    width: 100%; /* Ensure it does not exceed viewport */
+    max-width: 378px; /* Use max-width to set limits */
+  }
+
 }
