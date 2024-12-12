@@ -1,6 +1,3 @@
-import GreekSalad from "../assets/images/greek-salad-med.jpg"
-import Pasta from "../assets/images/pasta-medium.jpg"
-import Bruschetta from "../assets/images/taps-medium.jpg"
 import SpecialFoodItem from "./SpecialFoodItem"
 
 const Highlights = () => {
@@ -28,7 +25,7 @@ const Highlights = () => {
       image: 'taps-medium.jpg',
       description:
         "Our Bruscheta is made from grilled bread that has been smeared with garlic and seasoned with alt and olive oil.",
-    },
+    }
   ]
 
   return (

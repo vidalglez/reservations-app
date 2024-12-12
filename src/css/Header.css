@@ -13,3 +13,7 @@ header nav {
 .little-lemon-logo {
   width: 202px;
 }
+
+@media all and (max-width: 500px) {
+  
+}

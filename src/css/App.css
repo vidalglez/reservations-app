@@ -47,6 +47,7 @@ body {
 
 @media all and (max-width: 500px) {
   .yellow-button {
+    width: 160px;
     height: 40px;
   }
 }

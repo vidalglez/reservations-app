@@ -3,7 +3,8 @@
 }
 
 .highlights {
-  width: 890px;
+  width: 100%;
+  max-width: 890px;
   margin: 30px auto;
 }
 
@@ -89,4 +90,43 @@
 
 .order-delivery a:visited {
   color: #000000;
+}
+
+@media all and (max-width: 500px) {
+  .highlights {
+    width: 100%;
+    max-width: 378px;
+  }
+
+  .specials-header {
+    margin: 30px 20px;
+  }
+
+  .specials-content {
+    flex-direction: column;
+  }
+
+  .specials-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 0%;
+    border-top: 1px solid #495e57;
+  }
+
+  .specials-item:last-child {
+    border-bottom: 1px solid #495e57;
+  }
+
+  .specials-item-details {
+    margin: 20px;
+  }
+
+  .specials-item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+    align-self: center;
+    margin-right: 20px;
+  }
 }
