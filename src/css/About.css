@@ -61,8 +61,38 @@
 }
 
 @media all and (max-width: 500px) {
+
+  .about-section {
+    padding-bottom: 120px;
+  }
+
   .about {
     width: 100%; /* Ensure it does not exceed viewport */
     max-width: 378px; /* Use max-width to set limits */
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .about-title {
+    font-size: 48px;
+  }
+
+  .about-subtitle {
+    font-size: 44px;
+  }
+
+  .about-details {
+    margin: 20px;
+  }
+
+  .about-photo-container {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .restaurant-chef-image,
+  .restaurant-image {
+    width: 168px;
+    height: 236px;
   }
 }
