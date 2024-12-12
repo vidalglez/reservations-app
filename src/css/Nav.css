@@ -22,7 +22,9 @@ ul li a:visited {
 }
 
 @media all and (max-width: 500px) {
-  .nav-links {
-    display: none;
+
+  .nav-links ul {
+    flex-direction: column;
+    padding: 0;
   }
 }

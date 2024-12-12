@@ -19,6 +19,10 @@ header nav {
   header {
     width: 100%; /* Ensure it does not exceed viewport */
     max-width: 378px; /* Use max-width to set limits */
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
+    height: auto;
+    margin: 0 auto;
   }
 
 }
