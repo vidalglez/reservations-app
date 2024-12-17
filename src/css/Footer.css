@@ -45,9 +45,11 @@
 @media all and (max-width: 500px) {
   .footer-container {
     width: 100%; /* Ensure it does not exceed viewport */
-    max-width: 378px; /* Use max-width to set limits */
+    /* max-width: 378px;*/ /* Use max-width to set limits */
+    max-width: 338px;
     flex-direction: column;
     margin: 20px;
+    height: 100%;
   }
 
   .footer-little-lemon-image {
