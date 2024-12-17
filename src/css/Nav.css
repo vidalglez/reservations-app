@@ -1,16 +1,16 @@
-.nav-links ul {
+.nav-links {
   display: flex;
   justify-content: center;
   padding-left: 20px;
 }
 
-.nav-links ul li {
+.nav-links li {
   list-style: none;
   flex: 1;
   text-align: center;
 }
 
-.nav-links ul li a {
+.nav-links li a {
   font-family: "Karla", sans-serif;
   font-weight: 500;
 }
@@ -21,10 +21,24 @@ ul li a:visited {
   color: #000000;
 }
 
+.hamburguer-menu-icon {
+  display: none;
+}
+
 @media all and (max-width: 500px) {
 
-  .nav-links ul {
+  .nav-links-hidden {
+    display: none;
+  }
+
+  .nav-links {
     flex-direction: column;
     padding: 0;
+  }
+
+  .hamburguer-menu-icon {
+    display: inline;
+    width: 25px;
+    height: 25px;
   }
 }

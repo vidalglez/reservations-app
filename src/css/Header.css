@@ -15,6 +15,8 @@ header nav {
   width: 202px;
 }
 
+
+
 @media all and (max-width: 500px) {
   header {
     width: 100%; /* Ensure it does not exceed viewport */
@@ -23,6 +25,12 @@ header nav {
     flex-direction: column;
     height: auto;
     margin: 0 auto;
+  }
+
+  .little-lemon-logo {
+    /* width: 100%; */
+    align-self: center;
+    /* justify-content: center; */
   }
 
 }
