@@ -63,4 +63,18 @@
     width: 100%; /* Ensure it does not exceed viewport */
     max-width: 378px; /* Use max-width to set limits */
   }
+
+  .testimonials-content {
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+
+  .testimonial-item {
+    width: 160px;
+    margin-bottom: 20px;
+  }
+
+  .testimonials h1 {
+    font-size: 48px;
+  }
 }
