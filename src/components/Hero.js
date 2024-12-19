@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom"
 import RestaurantFood from "../assets/images/restauranfood.jpg"
+
 const Hero = () => {
   return (
     <section className="hero-section">
@@ -11,7 +13,7 @@ const Hero = () => {
             recipes served with a modern twist.
           </p>
           <div className="yellow-button">
-            <a href="#">Reserve a Table</a>
+            <Link to="/reservations">Reserve a Table</Link>
           </div>
         </article>
         <article>
