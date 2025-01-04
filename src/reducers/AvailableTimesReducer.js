@@ -7,6 +7,7 @@ const initializeTimes = {
     "21:00",
     "22:00",
   ],
+  selectedDate: ''
 }
 
 const updateTimes = (state, action) => {
@@ -15,7 +16,7 @@ const updateTimes = (state, action) => {
       console.log('---- SET_AVAILABLE_TIMES: ', action.payload)
       return {
         ...state,
-        //availableTimes: action.payload,
+        selectedDate: action.payload,
       }
     default:
       return state
