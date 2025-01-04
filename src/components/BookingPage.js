@@ -1,16 +1,10 @@
-import { useState } from "react"
+import { useReducer, useState } from "react"
 import BookingForm from "./BookingForm"
 import Reserved from "../assets/images/reserved-img.png"
+import { initializeTimes, updateTimes } from "../reducers/AvailableTimesReducer"
 
 const BookingPage = () => {
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ])
+  const [state, dispatch] = useReducer(updateTimes, initializeTimes)
   const [selectedTime, setSelectedTime] = useState("17:00")
   const [selectedOcassion, setSelectedOcassion] = useState("Birthday")
   const [bookingDate, setBookingDate] = useState("")
@@ -21,6 +15,7 @@ const BookingPage = () => {
   }
 
   const handleDateChange = (e) => {
+    dispatch({ type: "SET_AVAILABLE_TIMES", payload: [] })
     setBookingDate(e.target.value)
   }
 
@@ -50,7 +45,7 @@ const BookingPage = () => {
           <img src={Reserved} alt="" className="reserved-image" />
         </div>
         <BookingForm
-          availableTimes={availableTimes}
+          availableTimes={state.availableTimes}
           selectedTime={selectedTime}
           selectedOcassion={selectedOcassion}
           bookingDate={bookingDate}
