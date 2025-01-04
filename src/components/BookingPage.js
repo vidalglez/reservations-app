@@ -1,5 +1,6 @@
 import { useState } from "react"
 import BookingForm from "./BookingForm"
+import Reserved from "../assets/images/reserved-img.png"
 
 const BookingPage = () => {
   const [availableTimes, setAvailableTimes] = useState([
@@ -45,7 +46,9 @@ const BookingPage = () => {
           <h2 className="display-title">Little Lemon</h2>
           <h3 className="display-sub-title">Chicago</h3>
         </div>
-        <div></div>
+        <div>
+          <img src={Reserved} alt="" className="reserved-image" />
+        </div>
         <BookingForm
           availableTimes={availableTimes}
           selectedTime={selectedTime}

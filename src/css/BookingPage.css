@@ -11,4 +11,33 @@
   max-width: 890px;
   margin: 30px auto;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+.reserved-image {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+}
+
+.extra-margin-button {
+  width: 260px;
+}
+
+@media all and (max-width: 500px) {
+  .booking-page {
+    width: 100%;
+    max-width: 378px;
+    flex-direction: column;
+    height: auto;
+    margin: 0 auto;
+
+  }
+
+  .booking-page > * {
+    margin: 0 20px;
+  }
 }

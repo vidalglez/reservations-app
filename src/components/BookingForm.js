@@ -23,7 +23,7 @@ const BookingForm = ({
   }, [selectedTime])
 
   return (
-    <div>
+    <div className="booking-form">
       <h1>Reserve a table now!</h1>
       <div className="booking-form">
         <form onSubmit={handleSubmit}>
@@ -79,7 +79,7 @@ const BookingForm = ({
               ))}
             </select>
           </div>
-          <button type="submit" className="yellow-button">
+          <button type="submit" className="yellow-button extra-margin-button">
             Make your reservation
           </button>
         </form>
