@@ -26,7 +26,7 @@ const BookingForm = ({
     <div className="booking-form">
       <h1>Reserve a table now!</h1>
       <div className="booking-form">
-        <form onSubmit={handleSubmit}>
+        <form aria-label="booking-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="res-date">Choose date</label>
             <input
