@@ -15,7 +15,9 @@ const BookingPage = () => {
   }
 
   const handleDateChange = (e) => {
-    dispatch({ type: "SET_AVAILABLE_TIMES", payload: e.target.value })
+    console.log('Selected Date: ', e.target.value)
+    const selectedDate = new Date(e.target.value)
+    dispatch({ type: "SET_AVAILABLE_TIMES", payload: selectedDate })
     setBookingDate(e.target.value)
   }
 
