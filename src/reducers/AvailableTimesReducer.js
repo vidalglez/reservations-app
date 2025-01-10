@@ -34,7 +34,6 @@ const initializeTimes = {
 const updateTimes = (state, action) => {
   switch (action.type) {
     case "SET_AVAILABLE_TIMES":
-      console.log('---- SET_AVAILABLE_TIMES: ', action.payload)
       return {
         ...state,
         availableTimes: fetchAPI(action.payload),
@@ -45,4 +44,4 @@ const updateTimes = (state, action) => {
   }
 }
 
-export { initializeTimes, updateTimes }
+export { initializeTimes, updateTimes, submitAPI }

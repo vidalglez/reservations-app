@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+//import { useEffect } from "react"
+//import { useNavigate } from "react-router-dom"
 
 const BookingForm = ({
   availableTimes,
@@ -8,7 +9,7 @@ const BookingForm = ({
   handleDateChange,
   handleGuestsChange,
   handleOcassionChange,
-  handleSubmit
+  submitForm
 }) => {
   const ocassions = [
     "Birthday",
@@ -18,15 +19,19 @@ const BookingForm = ({
     "Other",
   ]
 
-  useEffect(() => {
-    console.log(selectedTime)
-  }, [selectedTime])
+  //const navigate = useNavigate()
+
+  // useEffect(() => {
+  //   console.log('inside seEffect', selectedTime)
+  //   navigate("/confirmed-booking")
+  // //}, [navigate])
+  // }, [])
 
   return (
     <div className="booking-form">
       <h1>Reserve a table now!</h1>
       <div className="booking-form">
-        <form aria-label="booking-form" onSubmit={handleSubmit}>
+        <form aria-label="booking-form" onSubmit={submitForm}>
           <div className="form-group">
             <label htmlFor="res-date">Choose date</label>
             <input

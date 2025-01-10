@@ -1,7 +1,8 @@
-import { useReducer, useState } from "react"
+import { useEffect, useReducer, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import BookingForm from "./BookingForm"
 import Reserved from "../assets/images/reserved-img.png"
-import { initializeTimes, updateTimes } from "../reducers/AvailableTimesReducer"
+import { initializeTimes, submitAPI, updateTimes } from "../reducers/AvailableTimesReducer"
 
 const BookingPage = () => {
   const [state, dispatch] = useReducer(updateTimes, initializeTimes)
@@ -9,6 +10,15 @@ const BookingPage = () => {
   const [selectedOcassion, setSelectedOcassion] = useState("Birthday")
   const [bookingDate, setBookingDate] = useState("")
   const [guests, setGuests] = useState(1)
+  const [submitResult, setSubmitResult] = useState(false)
+
+  const navigate = useNavigate()
+
+   useEffect(() => {
+    if(submitResult) {
+      navigate("/confirmed-booking")
+    }
+  }, [navigate, submitResult])
 
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value)
@@ -29,11 +39,9 @@ const BookingPage = () => {
     setSelectedOcassion(e.target.value)
   }
 
-  const handleSubmit = (e) => {
+  const submitForm = (e) => {
     e.preventDefault()
-    console.log(
-      `Booking submitted with the following values ${selectedTime} ${selectedOcassion} ${bookingDate} ${guests}`
-    )
+    setSubmitResult(submitAPI({selectedTime, selectedOcassion, bookingDate, guests}))
   }
 
   return (
@@ -56,7 +64,7 @@ const BookingPage = () => {
           handleDateChange={handleDateChange}
           handleGuestsChange={handleGuestsChange}
           handleOcassionChange={handleOcassionChange}
-          handleSubmit={handleSubmit}
+          submitForm={submitForm}
         />
       </div>
     </section>
