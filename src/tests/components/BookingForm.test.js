@@ -11,11 +11,11 @@ describe("Validate BookingForm component", () => {
   })
 
   test("Handle the submit action", () => {
-    const handleSubmit = jest.fn()
+    const submitForm = jest.fn()
     render(
       <BookingForm
         availableTimes={availableTimes}
-        handleSubmit={handleSubmit}
+        submitForm={submitForm}
       />
     )
 
@@ -27,6 +27,6 @@ describe("Validate BookingForm component", () => {
     fireEvent.change(timeSelect, { target: { value: "19:00" } })
     fireEvent.submit(form)
 
-    expect(handleSubmit).toHaveBeenCalled()
+    expect(submitForm).toHaveBeenCalled()
   })
 })

@@ -44,4 +44,4 @@ const updateTimes = (state, action) => {
   }
 }
 
-export { initializeTimes, updateTimes, submitAPI }
+export { initializeTimes, updateTimes, fetchAPI, submitAPI }
