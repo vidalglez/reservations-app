@@ -12,6 +12,7 @@ import './css/Highlights.css'
 import './css/Testimonials.css'
 import './css/About.css'
 import './css/Footer.css'
+import './css/BookingForm.css'
 import './css/BookingPage.css'
 
 function App() {

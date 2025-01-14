@@ -1,10 +1,10 @@
-//import { useEffect } from "react"
-//import { useNavigate } from "react-router-dom"
-
 const BookingForm = ({
   availableTimes,
   selectedTime,
   selectedOcassion,
+  bookingDate,
+  dateError,
+  guests,
   handleTimeChange,
   handleDateChange,
   handleGuestsChange,
@@ -19,13 +19,12 @@ const BookingForm = ({
     "Other",
   ]
 
-  //const navigate = useNavigate()
-
-  // useEffect(() => {
-  //   console.log('inside seEffect', selectedTime)
-  //   navigate("/confirmed-booking")
-  // //}, [navigate])
-  // }, [])
+  const areInputsValidated = () => {
+    if(bookingDate && selectedTime && guests && selectedOcassion && !dateError) {
+      return true;
+    }
+    return false
+  }
 
   return (
     <div className="booking-form">
@@ -33,22 +32,25 @@ const BookingForm = ({
       <div className="booking-form">
         <form aria-label="booking-form" onSubmit={submitForm}>
           <div className="form-group">
-            <label htmlFor="res-date">Choose date</label>
+            <label htmlFor="res-date">* Choose date</label>
             <input
               type="date"
               id="res-date"
               name="res-date"
               required
               onChange={handleDateChange}
+              value={bookingDate}
             />
+            {dateError && <p className="error-message">{dateError}</p>} 
           </div>
           <div className="form-group">
-            <label htmlFor="res-time">Choose time</label>
+            <label htmlFor="res-time">* Choose time</label>
             <select
               id="res-time"
               name="res-time"
               required
               onChange={handleTimeChange}
+              value={selectedTime}
             >
               {availableTimes.map((time, index) => (
                 <option key={index} value={time}>
@@ -58,7 +60,7 @@ const BookingForm = ({
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="guests">Number of guests</label>
+            <label htmlFor="guests">* Number of guests</label>
             <input
               type="number"
               id="guests"
@@ -67,14 +69,16 @@ const BookingForm = ({
               min="1"
               max="10"
               required
+              value={guests}
               onChange={handleGuestsChange}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="occasion">Occasion</label>
+            <label htmlFor="occasion">* Occasion</label>
             <select
               id="occasion"
               name="occasion"
+              value={selectedOcassion}
               onChange={handleOcassionChange}
             >
               {ocassions.map((ocassion, index) => (
@@ -84,7 +88,10 @@ const BookingForm = ({
               ))}
             </select>
           </div>
-          <button type="submit" className="yellow-button extra-margin-button">
+          <div className="form-group">
+            <label>* Indicates mandatory fields</label>
+          </div>
+          <button type="submit" className="yellow-button extra-margin-button" disabled={!areInputsValidated()}>
             Make your reservation
           </button>
         </form>

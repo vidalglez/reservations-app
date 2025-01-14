@@ -6,11 +6,12 @@ import { initializeTimes, submitAPI, updateTimes } from "../reducers/AvailableTi
 
 const BookingPage = () => {
   const [state, dispatch] = useReducer(updateTimes, initializeTimes)
-  const [selectedTime, setSelectedTime] = useState("17:00")
+  const [selectedTime, setSelectedTime] = useState(state.availableTimes[0])
   const [selectedOcassion, setSelectedOcassion] = useState("Birthday")
-  const [bookingDate, setBookingDate] = useState("")
+  const [bookingDate, setBookingDate] = useState('')
   const [guests, setGuests] = useState(1)
   const [submitResult, setSubmitResult] = useState(false)
+  const [dateError, setDateError] = useState(undefined)
 
   const navigate = useNavigate()
 
@@ -25,8 +26,16 @@ const BookingPage = () => {
   }
 
   const handleDateChange = (e) => {
-    console.log('Selected Date: ', e.target.value)
-    const selectedDate = new Date(e.target.value)
+    const selectedDate = new Date(e.target.value + "T00:00:00")
+    const today = new Date()
+    today.setHours(0, 0, 0 ,0)
+    if(selectedDate >= today) {
+      setDateError(undefined)
+    } else {
+      setDateError('Selected date should be today or later')
+      setBookingDate('')
+      return
+    }
     dispatch({ type: "SET_AVAILABLE_TIMES", payload: selectedDate })
     setBookingDate(e.target.value)
   }
@@ -59,6 +68,7 @@ const BookingPage = () => {
           selectedTime={selectedTime}
           selectedOcassion={selectedOcassion}
           bookingDate={bookingDate}
+          dateError={dateError}
           guests={guests}
           handleTimeChange={handleTimeChange}
           handleDateChange={handleDateChange}
