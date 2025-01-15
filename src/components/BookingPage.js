@@ -50,7 +50,9 @@ const BookingPage = () => {
 
   const submitForm = (e) => {
     e.preventDefault()
-    setSubmitResult(submitAPI({selectedTime, selectedOcassion, bookingDate, guests}))
+    if(bookingDate && selectedTime && guests && selectedOcassion && !dateError) {
+      setSubmitResult(submitAPI({selectedTime, selectedOcassion, bookingDate, guests}))
+    }
   }
 
   return (
