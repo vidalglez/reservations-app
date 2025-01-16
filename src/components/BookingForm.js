@@ -91,7 +91,7 @@ const BookingForm = ({
           <div className="form-group">
             <label>* Indicates mandatory fields</label>
           </div>
-          <button type="submit" className="yellow-button extra-margin-button" disabled={!areInputsValidated()}>
+          <button aria-label="Submit Form" type="submit" className="yellow-button extra-margin-button" disabled={!areInputsValidated()}>
             Make your reservation
           </button>
         </form>

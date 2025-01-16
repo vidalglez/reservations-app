@@ -11,7 +11,7 @@ const Nav = () => {
 
     return (
         <nav aria-label="Main Navigation">
-            <button onClick={onEventMenuHandler} aria-expanded={isMenuVisible} aria-controls="nav-links">
+            <button aria-label="On Click" onClick={onEventMenuHandler} aria-expanded={isMenuVisible} aria-controls="nav-links">
                 {/*TODO: add css for button to remove margin and background color*/}
                 <img src={HamburgerMenu} alt="Menu" className='hamburguer-menu-icon' />
             </button>
