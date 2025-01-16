@@ -5,7 +5,7 @@ const Footer = () => {
         <div>
           <img
             src={require(`../assets/images/little-lemon-logo.png`)}
-            alt=""
+            alt="Little Lemon Logo"
             className="footer-little-lemon-image"
           />
         </div>

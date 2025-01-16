@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="about-section" id="about-section">
+    <section className="about-section" id="about-section" aria-labelledby="about-section">
       <div className="about">
         <div className="about-details">
           <h2 className="about-title">Little Lemon</h2>

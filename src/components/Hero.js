@@ -3,7 +3,7 @@ import RestaurantFood from "../assets/images/restauranfood.jpg"
 
 const Hero = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section" aria-labelledby="hero-section">
       <div className="hero">
         <article>
           <h2 className="display-title">Little Lemon</h2>
@@ -17,7 +17,7 @@ const Hero = () => {
           </div>
         </article>
         <article>
-          <img src={RestaurantFood} alt="" className="restaurant-food-image" />
+          <img src={RestaurantFood} alt="Delicious food from Little Lemon" className="restaurant-food-image" />
         </article>
       </div>
     </section>

@@ -29,7 +29,7 @@ const Highlights = () => {
   ]
 
   return (
-    <section className="highlights-section">
+    <section className="highlights-section" aria-labelledby="highlights-section">
       <div className="highlights">
         <div className="specials-header">
           <h2 className="specials-title">Specials</h2>

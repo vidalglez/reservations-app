@@ -10,8 +10,11 @@ const Nav = () => {
     }
 
     return (
-        <nav >
-            <img src={HamburgerMenu} alt="" className='hamburguer-menu-icon' onClick={onEventMenuHandler}/>
+        <nav aria-label="Main Navigation">
+            <button onClick={onEventMenuHandler} aria-expanded={isMenuVisible} aria-controls="nav-links">
+                {/*TODO: add css for button to remove margin and background color*/}
+                <img src={HamburgerMenu} alt="Menu" className='hamburguer-menu-icon' />
+            </button>
             <ul className={`nav-links ${isMenuVisible? '' : 'nav-links-hidden'}`} >
                 <li><Link to="/">Home</Link></li>
                 <li><a href="#about-section">About</a></li>

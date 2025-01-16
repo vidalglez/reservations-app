@@ -34,7 +34,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <section className="testimonials-section">
+        <section className="testimonials-section" aria-labelledby="testimonials-section">
             <div className="testimonials">
                 <h1 >Testimonials</h1>
                 <div className="testimonials-content">
