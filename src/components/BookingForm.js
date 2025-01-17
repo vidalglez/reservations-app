@@ -32,7 +32,7 @@ const BookingForm = ({
       <div className="booking-form">
         <form aria-label="booking-form" onSubmit={submitForm}>
           <div className="form-group">
-            <label htmlFor="res-date">* Choose date</label>
+            <label htmlFor="res-date"><span>*</span> Choose date</label>
             <input
               type="date"
               id="res-date"
@@ -41,10 +41,10 @@ const BookingForm = ({
               onChange={handleDateChange}
               value={bookingDate}
             />
-            {dateError && <p className="error-message">{dateError}</p>} 
+            {dateError && <span style={{color: "red", marginLeft: "10px"}}>{dateError}</span>} 
           </div>
           <div className="form-group">
-            <label htmlFor="res-time">* Choose time</label>
+            <label htmlFor="res-time"><span>*</span> Choose time</label>
             <select
               id="res-time"
               name="res-time"
@@ -60,7 +60,7 @@ const BookingForm = ({
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="guests">* Number of guests</label>
+            <label htmlFor="guests"><span>*</span> Number of guests</label>
             <input
               type="number"
               id="guests"
@@ -74,7 +74,7 @@ const BookingForm = ({
             />
           </div>
           <div className="form-group">
-            <label htmlFor="occasion">* Occasion</label>
+            <label htmlFor="occasion"><span>*</span> Occasion</label>
             <select
               id="occasion"
               name="occasion"
@@ -89,7 +89,7 @@ const BookingForm = ({
             </select>
           </div>
           <div className="form-group">
-            <label>* Indicates mandatory fields</label>
+            <label className="mandatory">* Indicates mandatory fields</label>
           </div>
           <button aria-label="Submit Form" type="submit" className="yellow-button extra-margin-button" disabled={!areInputsValidated()}>
             Make your reservation
