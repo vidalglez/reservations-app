@@ -17,9 +17,9 @@ const BookingPage = () => {
 
    useEffect(() => {
     if(submitResult) {
-      navigate("/confirmed-booking")
+      navigate("/confirmed-booking", {state: { selectedTime, selectedOcassion, bookingDate, guests }})
     }
-  }, [navigate, submitResult])
+  }, [navigate, submitResult, selectedTime, selectedOcassion, bookingDate, guests])
 
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value)

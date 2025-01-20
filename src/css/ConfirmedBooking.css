@@ -1,0 +1,23 @@
+.confirmation-details {
+  font-family: "Karla", sans-serif;
+  /* font-weight: bolder; */
+  font-size: 22px;
+  color: #fff;
+}
+
+.confirmation-details span {
+  color: #f4ce14;
+}
+
+.little-lemon-team {
+    font-family: "Markazi Text", serif;
+    font-size: 30px;
+}
+
+.confirmation-details.cite {
+    margin-bottom: 5px;
+}
+
+.confirmation-details.signature {
+    margin-top: 5px;
+}

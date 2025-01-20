@@ -14,6 +14,7 @@ import './css/About.css'
 import './css/Footer.css'
 import './css/BookingPage.css'
 import './css/BookingForm.css'
+import './css/ConfirmedBooking.css'
 
 function App() {
   return (
