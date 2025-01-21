@@ -26,6 +26,10 @@ ul li a:visited {
   display: none;
 }
 
+.hamb-button {
+  display: none;
+}
+
 @media all and (max-width: 500px) {
 
   .nav-links-hidden {
@@ -41,5 +45,11 @@ ul li a:visited {
     display: inline;
     width: 25px;
     height: 25px;
+  }
+
+  .hamb-button {
+    display: inline;
+    background-color: transparent;
+    border: none;
   }
 }

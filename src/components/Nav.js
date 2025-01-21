@@ -11,17 +11,16 @@ const Nav = () => {
 
     return (
         <nav aria-label="Main Navigation">
-            <button aria-label="On Click" onClick={onEventMenuHandler} aria-expanded={isMenuVisible} aria-controls="nav-links">
-                {/*TODO: add css for button to remove margin and background color*/}
+            <button className="hamb-button" aria-label="On Click" onClick={onEventMenuHandler} aria-expanded={isMenuVisible} aria-controls="nav-links">
                 <img src={HamburgerMenu} alt="Menu" className='hamburguer-menu-icon' />
             </button>
             <ul className={`nav-links ${isMenuVisible? '' : 'nav-links-hidden'}`} >
-                <li><Link to="/">Home</Link></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><Link to="/reservations" >Reservations</Link></li>
-                <li className="order-online"><a href="#order-online" >Order Online</a></li>
-                <li><a href="#login">Login</a></li>
+                <li><Link to="/" onClick={onEventMenuHandler}>Home</Link></li>
+                <li><a href="#about-section" onClick={onEventMenuHandler}>About</a></li>
+                <li><a href="#menu" onClick={onEventMenuHandler} >Menu</a></li>
+                <li><Link to="/reservations" onClick={onEventMenuHandler} >Reservations</Link></li>
+                <li className="order-online"><a href="#order-online" onClick={onEventMenuHandler} >Order Online</a></li>
+                <li><a href="#login" onClick={onEventMenuHandler} >Login</a></li>
             </ul>
         </nav>
     )
