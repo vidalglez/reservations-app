@@ -26,6 +26,17 @@ const BookingForm = ({
     return false
   }
 
+  const defineAvailableTimes = (availableTimes) => {
+    if(!availableTimes){
+      return [<option key={1} defaultValue={''} disabled value="No times available" >No times available</option>]
+    }
+    return availableTimes.map((time, index) => (
+      <option key={index} value={time}>
+        {time}
+      </option>
+    ))
+  }
+
   return (
     <div className="booking-form">
       <h1>Reserve a table now!</h1>
@@ -52,11 +63,7 @@ const BookingForm = ({
               onChange={handleTimeChange}
               value={selectedTime}
             >
-              {availableTimes.map((time, index) => (
-                <option key={index} value={time}>
-                  {time}
-                </option>
-              ))}
+              {defineAvailableTimes(availableTimes)}
             </select>
           </div>
           <div className="form-group">

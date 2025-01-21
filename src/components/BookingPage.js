@@ -2,11 +2,11 @@ import { useEffect, useReducer, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import BookingForm from "./BookingForm"
 import Reserved from "../assets/images/reserved-img.png"
-import { initializeTimes, submitAPI, updateTimes } from "../reducers/AvailableTimesReducer"
+import { initializeTimes, fetchAPI, submitAPI, updateTimes } from "../reducers/AvailableTimesReducer"
 
 const BookingPage = () => {
   const [state, dispatch] = useReducer(updateTimes, initializeTimes)
-  const [selectedTime, setSelectedTime] = useState(state.availableTimes[0])
+  const [selectedTime, setSelectedTime] = useState('')
   const [selectedOcassion, setSelectedOcassion] = useState("Birthday")
   const [bookingDate, setBookingDate] = useState('')
   const [guests, setGuests] = useState(1)
@@ -14,6 +14,21 @@ const BookingPage = () => {
   const [dateError, setDateError] = useState(undefined)
 
   const navigate = useNavigate()
+
+  useEffect(() => {
+    fetchAPI(new Date()).then((result) => {
+      dispatch({ type: "SET_AVAILABLE_TIMES", payload: result })
+    })
+  }, [])
+
+  useEffect(() => {
+    const selecteBookingDate = new Date(bookingDate + "T00:00:00")
+    if(bookingDate && bookingDate.length > 0){
+      fetchAPI(selecteBookingDate).then((result) => {
+        dispatch({ type: "SET_AVAILABLE_TIMES", payload: result })
+      })
+    }
+  }, [bookingDate])
 
    useEffect(() => {
     if(submitResult) {
@@ -36,7 +51,6 @@ const BookingPage = () => {
       setBookingDate('')
       return
     }
-    dispatch({ type: "SET_AVAILABLE_TIMES", payload: selectedDate })
     setBookingDate(e.target.value)
   }
 
@@ -51,7 +65,9 @@ const BookingPage = () => {
   const submitForm = (e) => {
     e.preventDefault()
     if(bookingDate && selectedTime && guests && selectedOcassion && !dateError) {
-      setSubmitResult(submitAPI({selectedTime, selectedOcassion, bookingDate, guests}))
+      submitAPI({selectedTime, selectedOcassion, bookingDate, guests}).then((result) => {
+        setSubmitResult(result)
+      })
     }
   }
 

@@ -19,26 +19,41 @@ const fetchAPI = function(date) {
           result.push(i + ':30');
       }
   }
-  return result;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if(result) {
+        resolve(result)
+      }
+      else {
+        reject('Error fetching available times')
+      }
+    }, 1000)
+  })
 };
 
 const submitAPI = function(formData) {
-  return true;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+    resolve(true)
+    }, 1000)
+  })
+  //return true;
 };
 
-const initializeTimes = {
-  availableTimes: fetchAPI(new Date()),
-  selectedDate: ''
+const initializeTimes = () => {
+  return {
+    availableTimes: [],
+    selectedDate: ''
+  }
 }
 
 const updateTimes = (state, action) => {
   switch (action.type) {
-    case "SET_AVAILABLE_TIMES":
-      return {
-        ...state,
-        availableTimes: fetchAPI(action.payload),
-        selectedDate: action.payload,
-      }
+      case "SET_AVAILABLE_TIMES":
+        return {
+          ...state,
+          availableTimes: action.payload
+        }
     default:
       return state
   }
