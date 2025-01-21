@@ -1,20 +1,31 @@
 const About = () => {
   return (
-    <section className="about-section" id="about-section" aria-labelledby="about-section">
+    <section
+      className="about-section"
+      id="about-section"
+      aria-labelledby="about-section"
+    >
       <div className="about">
         <div className="about-details">
           <h2 className="about-title">Little Lemon</h2>
           <h3 className="about-subtitle">Chicago</h3>
           <p className="about-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at
-            ex leo. Maecenas enim sem, laoreet at nulla ac, luctus scelerisque
-            massa. Praesent ut molestie nisi. Aliquam arcu lorem, auctor
-            condimentum blandit id, lobortis in nisi. Ut diam justo, euismod in
-            accumsan id, vehicula sit amet tellus. Pellentesque porttitor elit
-            lacus, vitae lacinia magna ultricies quis. Etiam vitae tellus et mi
-            hendrerit consequat. In dictum ligula in elit euismod malesuada.
-            Curabitur varius augue id tempus ultricies. Mauris suscipit porta
-            odio, et pretium nibh scelerisque ut.
+            Based in Chicago, Illinois, Little Lemon is a family-owned
+            Mediterranean restaurant, focused on traditional recipes served with
+            a modern twist. The chefs draw inspiration from Italian, Greek, and
+            Turkish culture and have a menu of 12–15 items that they rotate
+            seasonally. The restaurant has a rustic and relaxed atmosphere with
+            moderate prices, making it a popular place for a meal any time of
+            the day.
+          </p>
+          <p className="about-description">
+            Little Lemon is owned by two Italian brothers, Mario and
+            Adrian, who moved to the United States to pursue their shared dream
+            of owning a restaurant. To craft the menu, Mario relies on family
+            recipes and his experience as a chef in Italy. Adrian does all the
+            marketing for the restaurant and led the effort to expand the menu
+            beyond classic Italian to incorporate additional cuisines from the
+            Mediterranean region.
           </p>
         </div>
         <div className="about-photo-container">

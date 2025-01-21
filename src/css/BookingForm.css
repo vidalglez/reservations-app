@@ -20,6 +20,10 @@
     color: #f4ce14;
 }
 
+.booking-form button:hover {
+    cursor: pointer;
+}
+
 .form-group {
   font-family: "Karla", sans-serif;
   /* font-weight: bolder; */

@@ -8,7 +8,7 @@ const seededRandom = function (seed) {
 }
 
 const fetchAPI = function(date) {
-  let result = [];
+  let result = [''];
   let random = seededRandom(date.getDate());
 
   for(let i = 17; i <= 23; i++) {

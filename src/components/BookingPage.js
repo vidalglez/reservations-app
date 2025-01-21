@@ -12,6 +12,7 @@ const BookingPage = () => {
   const [guests, setGuests] = useState(1)
   const [submitResult, setSubmitResult] = useState(false)
   const [dateError, setDateError] = useState(undefined)
+  const [timeError, setTimeError] = useState(undefined)
 
   const navigate = useNavigate()
 
@@ -37,7 +38,25 @@ const BookingPage = () => {
   }, [navigate, submitResult, selectedTime, selectedOcassion, bookingDate, guests])
 
   const handleTimeChange = (e) => {
-    setSelectedTime(e.target.value)
+    if(!e.target.value || e.target.value === '' || e.target.value.length === 0) {
+      setSelectedTime('')
+      setTimeError('Please choose a time to book')
+    } else {
+      setSelectedTime(e.target.value)
+      setTimeError(undefined)
+    }    
+  }
+
+  const handleBlurDateChange = (e) => {
+    if(!e.target.value || e.target.value === '' || e.target.value.length === 0) {
+      setDateError('Please choose a date to book')
+    }
+  }
+
+  const handleBlurTimeChange = (e) => {
+    if(!e.target.value || e.target.value === '' || e.target.value.length === 0) {
+      setTimeError('Please choose a time to book')
+    }
   }
 
   const handleDateChange = (e) => {
@@ -65,8 +84,9 @@ const BookingPage = () => {
   const submitForm = (e) => {
     e.preventDefault()
     if(bookingDate && selectedTime && guests && selectedOcassion && !dateError) {
+      e.target[4].disabled = true
       submitAPI({selectedTime, selectedOcassion, bookingDate, guests}).then((result) => {
-        setSubmitResult(result)
+        setSubmitResult(result)        
       })
     }
   }
@@ -86,10 +106,13 @@ const BookingPage = () => {
           selectedTime={selectedTime}
           selectedOcassion={selectedOcassion}
           bookingDate={bookingDate}
+          timeError={timeError}
           dateError={dateError}
           guests={guests}
           handleTimeChange={handleTimeChange}
+          handleBlurTimeChange={handleBlurTimeChange}
           handleDateChange={handleDateChange}
+          handleBlurDateChange={handleBlurDateChange}
           handleGuestsChange={handleGuestsChange}
           handleOcassionChange={handleOcassionChange}
           submitForm={submitForm}

@@ -4,9 +4,12 @@ const BookingForm = ({
   selectedOcassion,
   bookingDate,
   dateError,
+  timeError,
   guests,
   handleTimeChange,
+  handleBlurTimeChange,
   handleDateChange,
+  handleBlurDateChange,
   handleGuestsChange,
   handleOcassionChange,
   submitForm
@@ -50,9 +53,10 @@ const BookingForm = ({
               name="res-date"
               required
               onChange={handleDateChange}
+              onBlur={handleBlurDateChange}
               value={bookingDate}
             />
-            {dateError && <span style={{color: "red", marginLeft: "10px"}}>{dateError}</span>} 
+            {dateError && <span style={{color: "#EE9972", marginLeft: "10px"}}>{dateError}</span>} 
           </div>
           <div className="form-group">
             <label htmlFor="res-time"><span>*</span> Choose time</label>
@@ -61,10 +65,12 @@ const BookingForm = ({
               name="res-time"
               required
               onChange={handleTimeChange}
+              onBlur={handleBlurTimeChange}
               value={selectedTime}
             >
               {defineAvailableTimes(availableTimes)}
             </select>
+            {timeError && <span style={{color: "#EE9972", marginLeft: "10px"}}>{timeError}</span>} 
           </div>
           <div className="form-group">
             <label htmlFor="guests"><span>*</span> Number of guests</label>

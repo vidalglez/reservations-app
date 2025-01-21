@@ -1,7 +1,6 @@
 import {
   initializeTimes,
-  updateTimes,
-  fetchAPI
+  updateTimes
 } from "../../reducers/AvailableTimesReducer"
 
 describe("Validate reducers", () => {
