@@ -6,7 +6,7 @@ const seededRandom = function (seed) {
       return (s = s * a % m) / m;
   };
 }
-
+// Defining the fetchAPI function here due to link https://raw.githubusercontent.com/courseraap/capstone/main/api.js is causing browser to block script
 const fetchAPI = function(date) {
   let result = [''];
   let random = seededRandom(date.getDate());
@@ -31,13 +31,22 @@ const fetchAPI = function(date) {
   })
 };
 
+
+// Defining the submitAPI function here due to link https://raw.githubusercontent.com/courseraap/capstone/main/api.js is causing browser to block script
 const submitAPI = function(formData) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-    resolve(true)
+      /*
+      // The below code is commented out, remove commented block of code if you want to randomly resolve or reject the promise
+      if(Math.random() > 0.5) {
+        resolve(true)
+      } else {
+        reject(false)
+      }
+      */
+      resolve(true)
     }, 1000)
   })
-  //return true;
 };
 
 const initializeTimes = () => {

@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event"
 import { Link, useLocation } from "react-router-dom"
 
 const ConfirmedBooking = () => {

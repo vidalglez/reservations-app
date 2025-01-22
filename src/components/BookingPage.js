@@ -10,7 +10,7 @@ const BookingPage = () => {
   const [selectedOcassion, setSelectedOcassion] = useState("Birthday")
   const [bookingDate, setBookingDate] = useState('')
   const [guests, setGuests] = useState(1)
-  const [submitResult, setSubmitResult] = useState(false)
+  const [submitResult, setSubmitResult] = useState(undefined)
   const [dateError, setDateError] = useState(undefined)
   const [timeError, setTimeError] = useState(undefined)
 
@@ -35,6 +35,9 @@ const BookingPage = () => {
     if(submitResult) {
       navigate("/confirmed-booking", {state: { selectedTime, selectedOcassion, bookingDate, guests }})
     }
+    if(submitResult === false) {
+      navigate("/booking-failed")
+    }
   }, [navigate, submitResult, selectedTime, selectedOcassion, bookingDate, guests])
 
   const handleTimeChange = (e) => {
@@ -44,7 +47,7 @@ const BookingPage = () => {
     } else {
       setSelectedTime(e.target.value)
       setTimeError(undefined)
-    }    
+    }
   }
 
   const handleBlurDateChange = (e) => {
@@ -86,7 +89,9 @@ const BookingPage = () => {
     if(bookingDate && selectedTime && guests && selectedOcassion && !dateError) {
       e.target[4].disabled = true
       submitAPI({selectedTime, selectedOcassion, bookingDate, guests}).then((result) => {
-        setSubmitResult(result)        
+        setSubmitResult(result)
+      }).catch((result) => {
+        setSubmitResult(result)
       })
     }
   }

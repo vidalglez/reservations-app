@@ -3,6 +3,7 @@ import BookingPage from './components/BookingPage';
 import ConfirmedBooking from './components/ConfirmedBooking';
 import Header from './components/Header';
 import Main from './components/Main';
+import FailedBooking from './components/FailedBooking';
 import Footer from './components/Footer';
 import './css/App.css';
 import './css/Header.css'
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/reservations" element={<BookingPage />} />
         <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
+        <Route path="/booking-failed" element={<FailedBooking/>}/>
       </Routes>
       <Footer />
     </>
