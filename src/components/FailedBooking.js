@@ -11,7 +11,7 @@ const FailedBooking = () => {
           </p>
         </div>
         <div className="yellow-button">
-          <Link to="/">Back to Home</Link>
+          <Link aria-label="Back to Home" to="/">Back to Home</Link>
         </div>
       </div>
     </section>

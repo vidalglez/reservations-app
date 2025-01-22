@@ -20,7 +20,7 @@ const ConfirmedBooking = () => {
           <p className="confirmation-details signature"><span className="little-lemon-team">Little Lemon Team</span></p>
         </div>
         <div className="yellow-button">
-          <Link to="/">Back to Home</Link>
+          <Link aria-label="Back to Home" to="/">Back to Home</Link>
         </div>
       </div>
     </section>
